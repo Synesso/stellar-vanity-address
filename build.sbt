@@ -3,4 +3,4 @@ name := "vanity-address"
 organization := "io.github.synesso"
 version := "1.0"
 
-libraryDependencies += "io.github.synesso" %% "scala-stellar-sdk" % "0.5.0"
+libraryDependencies += "io.github.synesso" %% "scala-stellar-sdk" % "0.8.0"

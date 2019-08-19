@@ -21,7 +21,7 @@ object Main extends App {
 
     Source.fromIterator[Seq[String]](() => Iterator.continually(args))
       .via(balancer(findFlow, Runtime.getRuntime.availableProcessors()))
-      .runForeach(kp => println(kp.accountId + ":" + new String(kp.secretSeed)))
+      .runForeach(kp => println(kp.accountId + ":" + kp.secretSeed.mkString))
 
 
   def balancer[In, Out](worker: Flow[In, Out, Any], workerCount: Int): Flow[In, Out, NotUsed] = {
